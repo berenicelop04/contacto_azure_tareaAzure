@@ -5,7 +5,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('formulario_contacto');
+    // Obtiene TODOS los contactos ordenados del más nuevo al más viejo
+    $contactos = Contacto::orderBy('id', 'desc')->get();
+    
+    // Pasa los contactos a la vista
+    return view('formulario_contacto', ['contactos' => $contactos]);
 });
 
 Route::post('/save', function (Request $request) {
@@ -23,4 +27,3 @@ Route::post('/save', function (Request $request) {
 
     return redirect('/')->with('success', 'Contacto guardado correctamente');
 });
-
