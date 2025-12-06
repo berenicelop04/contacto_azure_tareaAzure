@@ -83,7 +83,7 @@
             margin-bottom: 20px;
         }
         .total-contactos {
-            background: #2299e9ff;
+            background: #e922e2ff;
             color: white;
             padding: 5px 15px;
             border-radius: 20px;

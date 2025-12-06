@@ -15,5 +15,5 @@ class Contacto extends Model
     protected $fillable = ['nombre', 'correo'];
 
     // Si quieres usar timestamps (create y update), se mantiene true
-    public $timestamps = true;
+    public $timestamps = false;
 }
